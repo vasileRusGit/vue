@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue js</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.css"></link>
+</head>
+<body>
+
+  <style type="text/css">
+    body{
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+    .color-red{
+      color: red;
+    }
+    .is-loading{
+      background-color: green;
+    }
+    #root{
+      font-size: 40px;
+      font-family: "Roboto";
+    }
+    .sub{
+      font-size: 20px;
+    }
+  </style>
+
+
+  <div id="root" class="container">
+    <!-- /////////////////////////////////////////////////////////////////// LISTS -->
+<!--    <ul>
+     <li v-for="name in names">{{name}}</li>
+   </ul> -->
+
+
+
+   <!-- /////////////////////////////////////////////////////////////////// EVENT LISTENER -->
+<!--    <input type="text" v-model='newName'>
+ <button @click="onClick">Add name</button> -->
+
+
+
+ <!-- /////////////////////////////////////////////////////////////////// ATTRIBUTE BINDING -->
+<!--  <button :title='title'>Hover over me</button>
+ <button :class="{'is-loading': isLoading}" @click="toggleClass">Click!</button> -->
+
+
+
+ <!-- /////////////////////////////////////////////////////////////////// COMPUTED PROPERTIES -->
+ <!-- <h1>{{reverseMessage}}</h1> -->
+<!--   <h1>All tasks</h1>
+  <ul>
+    <li class="sub" v-for="task in tasks">{{task}}</li>
+  </ul>
+  <h1>Incomplete tasks</h1>
+  <ul>
+    <li class="sub" v-for="task in incompleteTasks">{{task}}  <button @click="task.completed=true">x</button></li>
+  </ul>
+  <h1>Complete tasks</h1>
+  <ul>
+    <li class="sub" v-for="task in completeTasks">{{task}}<button @click="task.completed=false">x</button></li>
+  </ul> -->
+
+
+
+  <!-- /////////////////////////////////////////////////////////////////// COMPONETS -->
+  <!-- <task-list></task-list> -->
+
+<!--     <message title="Hello World" body="Lorem ipsun dolor"></message>
+
+    <modal v-show="showModal" @close="hideModalOnClick"><p>this is my text lorem ipsum dolor sit amet</p></modal>
+    <button @click="showModalOnClick">Show Modal</button> -->
+
+<!--     <tabs>
+      <tab :selected="true" name="About Us">
+        <h1>Here is the content for the about us.</h1>
+      </tab>
+
+      <tab name="About Us Culture">
+        <h1>Here is the content for the about us culture.</h1>
+      </tab>
+
+      <tab name="About Us Vacation">
+        <h1>Here is the content for the about us vacation.</h1>
+      </tab>
+    </tabs> -->
+
+
+
+    <!-- /////////////////////////////////////////////////////////////////// COMPONET communication -->
+<!--     <coupon @applied="onCouponAplied"></coupon>
+  <h1 v-if="couponApplied">Coupon was Applied</h1> -->
+
+
+
+  <!-- /////////////////////////////////////////////////////////////////// NAMED SLOTS -->
+  <!-- <modal> -->
+  <!-- <div slot="header">My title</div> -->
+  <!-- <template slot="header">My new Title</template> -->
+  <!--  -->
+  <!-- <template slot="content">Lorem ipsum dolor sit amet.</template> -->
+
+  <!-- <div slot="footer"> -->
+  <!-- <a class="button is-success">Save changes</a> -->
+<!--       <a class="button">Cancel</a>
+    </div>
+
+  </modal> -->
+
+
+
+  <!-- /////////////////////////////////////////////////////////////////// INLINE TEMPLATESS -->
+  <progress-view inline-template>
+    <div>
+      <h1>Your Progress Through this course is {{completionRate}}%</h1>
+
+      <p><button @click="completionRate += 10">Update completion rate</button></p>
+    </div>
+  </progress-view>
+
+
+</div>
+
+
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<div class="wrap cf">
+  <div class="heading cf">
+    <h1>My Order</h1>
+  </div>
+  <div class="cart">
+    <ul class="cartWrap">
+      <!-- Cart Item -->
+      <li class="items even">
+       <div class="infoWrap"> 
+        <div class="cartSection info">
+          <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+          <h3>Backpack Electricity</h3>
+          <p> <input type="text"  class="qty" placeholder="1" disabled/> x $5.00</p>
+        </div>  
+        <div class="prodTotal cartSection">
+          <p style="float: right">$15.00</p>
+        </div>
+      </li>
+
+      <!-- Cart Item -->
+      <li class="items odd">
+       <div class="infoWrap"> 
+        <div class="cartSection info">
+          <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+          <h3>Backpack To Home - Electricity</h3>
+          <p> <input type="text"  class="qty" placeholder="1" disabled/> x $5.00</p>
+        </div>  
+        <div class="prodTotal cartSection">
+          <p style="float: right">$15.00</p>
+        </div>
+      </li>
+
+
+    </ul>
+  </div>
+  
+  
+  <div class="subtotal cf">
+    <ul>
+      <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $.cookie('order', JSON.stringify('test'), { path: '/' });
+
+    var order = $.parseJSON($.cookie("order"));
+    console.log(order);
+  });
+</script>
+
+
+<div class="accordion">
+  <!-- span to target fix closing accordion -->
+  <span class="target-fix" id="accordion"></span>
+  <!-- First Accoridon Option -->
+  <div class="acordionTitle">
+    <!-- span to target fix accordion -->
+    <span class="target-fix" id="accordion1"></span>
+    <!-- Link to open accordion, hidden when open --> 
+    <a class="acordionListNames" href="#accordion1" id="open-accordion1" title="open">First Accordion</a></strong>
+    <!-- Link to close accordion, hidden when closed -->
+    <a class="acordionListNames" href="#accordion" id="close-accordion1" title="close">First Accordion</a> </strong>
+    <!-- Accorion content goes in this div -->
+    <div class="accordion-content">
+      <p>Accordion 1 Content</p>
+    </div>
+  </div>
+  <!-- Second Accoridon Option -->
+  <div class="acordionTitle">
+    <span class="target-fix" id="accordion2"></span>
+    <strong><a class="acordionListNames" href="#accordion2" id="open-accordion2" title="open">Second Accordion</a></strong>
+    <strong><a class="acordionListNames" href="#accordion" id="close-accordion2" title="close">Second Accordion</a></strong>
+    <div class="accordion-content">
+      <p>Accordion 2 Content.</p>       
+    </div>
+  </div>
+  <!-- Third Accoridon Option -->
+  <div class="acordionTitle">
+    <span class="target-fix" id="accordion3"></span>
+    <strong><a class="acordionListNames" href="#accordion3" id="open-accordion3" title="open">Third Accordion</a></strong>
+    <strong><a class="acordionListNames" href="#accordion" id="close-accordion3" title="close">Third Accordion</a></strong>
+    <div class="accordion-content">
+      <p>Accordion 3 Content</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion">
+  <!-- span to target fix closing accordion -->
+  <span class="target-fix" id="accordion"></span>
+
+  <!-- First Accoridon Option -->
+  <div class="acordionTitle">
+    <span class="target-fix" id="accordion1"></span>
+    <a class="acordionListNames" href="#accordion1" id="open-accordion1" title="open">First Accordion</a>
+    <a class="acordionListNames" href="#accordion" id="close-accordion1" title="close">First Accordion</a> 
+    <div class="accordion-content">
+      <p>Accordion 1 Content</p>
+    </div>
+  </div>
+
+  <!-- Second Accoridon Option -->
+  <div class="acordionTitle">
+    <span class="target-fix" id="accordion2"></span>
+    <a class="acordionListNames" href="#accordion2" id="open-accordion2" title="open">Second Accordion</a>
+    <a class="acordionListNames" href="#accordion" id="close-accordion2" title="close">Second Accordion</a>
+    <div class="accordion-content">
+      <p>Accordion 2 Content.</p>       
+    </div>
+  </div>
+
+  <!-- Third Accoridon Option -->
+  <div class="acordionTitle">
+    <span class="target-fix" id="accordion3"></span>
+    <a class="acordionListNames" href="#accordion3" id="open-accordion3" title="open">Third Accordion</a>
+    <a class="acordionListNames" href="#accordion" id="close-accordion3" title="close">Third Accordion</a>
+    <div class="accordion-content">
+      <p>Accordion 3 Content</p>
+    </div>
+  </div>
+</div>
+
+<!--     <p class="text-center register-here-text" style="color:white;">You dont have an account?
+  <a href="#" class="register_here"> Register here</a>
+</p>
+<script type="text/javascript">
+  $(document).ready(function() {
+    if(window.location.pathname.split("/")[1].includes('members-access')){
+      // when it loads check which form is activ
+      if($('#register-form').is(':visible')){
+        $('.register-here-text').hide();
+      }else if ($('#reset-form').is(':visible')){
+        $('.register-here-text').hide();
+      }else{
+        $('.register-here-text').show();
+      }
+      // codnition if you are on sign in page or on the register page
+      $('.register_here').on('click', function(){
+        $('#register-form').show();
+        $('#login-form').hide();
+        $('#reset-form').hide();
+        showHideRegister();
+      });
+      $('.goto-login').on('click', function(){
+        showHideRegister();
+      });
+      $('.goto-reset').on('click', function(){
+        showHideRegister();
+      });
+      function showHideRegister(){
+        if($('#register-form').is(':visible')){
+          $('.register-here-text').hide();
+        }else if($('#reset-form').is(':visible')){
+          $('.register-here-text').hide();
+        }else{
+          $('.register-here-text').show();
+        }
+      }
+    }
+  });
+</script> -->
+
+
+
+<!-- WITEN TESTIMONIALS -->
+<div class="writenTestimonials">
+<figure class="snip1359">
+  <figcaption><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg" alt="profile-sample6" class="profile" />
+    <blockquote>I'm looking for something that can deliver a 50-pound payload of snow on a small feminine target. Can you suggest something? Hello...? </blockquote>
+  </figcaption>
+  <h3>Hans Down<span>Engineer</span></h3>
+</figure>
+  <figure class="snip1359 hover">
+  <figcaption><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample7.jpg" alt="profile-sample7" class="profile" />
+    <blockquote>Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you? Calvin: Nobody thinks I'm a genius.</blockquote>
+  </figcaption>
+  <h3>Wisteria Widget<span>Photographer</span></h3>
+</figure>
+</div
