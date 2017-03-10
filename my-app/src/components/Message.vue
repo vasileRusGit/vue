@@ -18,5 +18,5 @@
 		padding: 10px;
 		border: 1px solid gray;
 		margin-bottom: 10px;
-	}
+	} 
 </style>
